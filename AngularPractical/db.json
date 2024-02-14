@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "kunall",
+      "description": "yadava",
+      "quantity": 2344,
+      "price": 1123
+    },
+    {
+      "id": "2",
+      "name": "vikash",
+      "description": "bahadur",
+      "quantity": 12356,
+      "price": 12367
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "firstName": "kunal",
+      "lastName": "kumar",
+      "email": "yadav@mailinator.com",
+      "mobile": 747745888,
+      "salary": "12345"
+    },
+    {
+      "id": "2",
+      "firstName": "kumar",
+      "lastName": "verma",
+      "email": "vermaaa@mailinator.com",
+      "mobile": 243242424,
+      "salary": "23424"
+    },
+    {
+      "id": "3",
+      "firstName": "jghjfhh",
+      "lastName": null,
+      "email": null,
+      "mobile": null,
+      "salary": null
+    }
+  ],
+  "signupUser": [
+    {
+      "id": "b0a4",
+      "fullName": "Kunal",
+      "email": "kunal@mailinator.com",
+      "password": "Kunal@125",
+      "mobile": 9572916292
+    },
+    {
+      "id": "0d14",
+      "fullName": "kumar",
+      "email": "kumar@mailinator.com",
+      "password": "12345",
+      "mobile": 7903438810
+    },
+    {
+      "id": "bfed",
+      "fullName": "kumar",
+      "email": "kumar@mailinator.com",
+      "password": "12345",
+      "mobile": 5465674574
+    },
+    {
+      "id": "c28c",
+      "fullName": "kunal",
+      "email": "kk@mailinator.com",
+      "password": "12345",
+      "mobile": 132232432
+    },
+    {
+      "id": "8f64",
+      "fullName": "verma",
+      "email": "verma@mailinator.com",
+      "password": "12345",
+      "mobile": 7903438810
+    },
+    {
+      "id": "a2a5",
+      "fullName": "raz",
+      "email": "raz@gmail.com",
+      "password": "12345",
+      "mobile": 243242
+    },
+    {
+      "id": "b0fd",
+      "fullName": "kunal",
+      "email": "yadav@mailinator.com",
+      "password": "123456",
+      "mobile": 238384238
+    },
+    {
+      "id": "6543",
+      "fullName": "kunal",
+      "email": "kunal@gmail.com",
+      "password": "12345",
+      "mobile": 790
+    },
+    {
+      "id": "9470",
+      "fullName": "kunal",
+      "email": "kunal@samcom.com",
+      "password": "12345",
+      "mobile": 7903438810
+    }
+  ]
+}

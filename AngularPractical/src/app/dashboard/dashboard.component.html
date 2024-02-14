@@ -1,0 +1,91 @@
+
+<!-- Create a Product module with components (Parent):
+● Product components should display the product list in a table format.
+● Place a button above the table for adding a new product.
+● The table should include the following fields:
+- Name
+- Description
+- Price
+- Quantity
+- Action (Edit and Delete buttons with functionality) -->
+<nav class="navbar navbar light bg-primary">
+<div class="container-fluid">
+    <h1>Crud</h1>
+    <div class="d-flex"></div>
+    <button class="btn btn-success" (click)="clickadded()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> Add</button>
+</div>
+</nav>
+
+<table class="table">
+    <thead>
+        <th scope="col">UserId</th>
+        <th scope="col"> Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rows of userdata">
+        <td>{{rows.id}}</td>
+        <td>{{rows.name}}</td>
+        <td>{{rows.description}}</td>
+        <td>{{rows.price}}</td>
+        <td>{{rows.quantity}}</td>
+        <td>
+           <button class="btn btn-info" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onEdit(rows)">Edit</button> 
+           <button class="btn btn-danger" (click)="deleteUser(rows)">Delete</button>
+        </td>
+    </tr>
+        
+    </tbody>
+   </table>
+
+
+   <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formvalue">
+                <div class="form-group" >
+                  <label for="formGroupExampleInput">Name</label>
+                  <input type="text" formControlName="name" class="form-control" id="formGroupExampleInput" placeholder="Name">
+                  <div class="errr-message " *ngIf="formvalue.get('name')?.hasError('required')&&formvalue.get('name')?.touched">Name is required</div>
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Description</label>
+                  <input type="text" formControlName="description" class="form-control" id="formGroupExampleInput2" placeholder="Description">
+                  <div class="errr-message " *ngIf="formvalue.get('description')?.hasError('required')&&formvalue.get('description')?.touched">Description is required</div>
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Price</label>
+                    <input type="number" formControlName="price" class="form-control" id="formGroupExampleInput3" placeholder="Price">
+                    <div class="errr-message " *ngIf="formvalue.get('price')?.hasError('required')&&formvalue.get('price')?.touched">Price is required</div>
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Quantity</label>
+                    <input type="number" formControlName="quantity" class="form-control" id="formGroupExampleInput4" placeholder="Quantity">
+                    <div class="errr-message " *ngIf="formvalue.get('quantity')?.hasError('required')&&formvalue.get('quantity')?.touched">Quantity is required</div>
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close">close</button>
+          <button type="button" class="btn btn-primary" (click)="postUser()" *ngIf="show" [disabled]="formvalue.invalid">Add</button>
+          <button type="button" class="btn btn-primary" (click)="updateUser()" *ngIf="hide">Update</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
